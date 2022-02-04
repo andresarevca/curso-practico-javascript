@@ -5,14 +5,22 @@ const lista1= [
     500,
 ];
 
-let sumaLista1= 0;
+
 
 function calcularPromedio(array) {
-    for (let i = 0; i < array.length; i++) {
+    /*let sumaLista= 0;
+
+     for (let i = 0; i < array.length; i++) {
         sumaLista1 = sumaLista1+array[i];
-    };
+    }; */
     
-    const promedio=sumaLista1/lista1.length;
+    let sumaLista= array.reduce(
+        function (valorAcumulado=0,nuevoElemento) {
+            return valorAcumulado+nuevoElemento;
+        }
+    );
+
+    const promedio=sumaLista/lista1.length;
 
     return promedio;
 }
